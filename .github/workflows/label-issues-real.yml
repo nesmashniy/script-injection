@@ -15,8 +15,7 @@ jobs:
           curl -X POST \
           --url https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/labels \
           -H 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
-          -H 'content-type: application/json' \
+          -H 'content-type: application/vnd.github+json' \
           -d '{
               "labels": ["bug"]
-            }' \
-          --fail
+            }'
