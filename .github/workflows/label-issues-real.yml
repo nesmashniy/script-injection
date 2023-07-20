@@ -18,4 +18,5 @@ jobs:
           -H 'content-type: application/vnd.github+json' \
           -d '{
               "labels": ["bug"]
-            }'
+            }' \
+          --fail
